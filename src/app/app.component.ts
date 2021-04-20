@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Plugins } from '@capacitor/core';
+const { SplashScreen } = Plugins;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(public router: Router) {
+    SplashScreen.hide();
+    this.initializeApp();
+  }
+
+  async initializeApp(){
+    this.router.navigateByUrl('splash');
+  }
+
+
 }

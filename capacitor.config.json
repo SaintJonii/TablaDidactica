@@ -1,0 +1,15 @@
+{
+  "appId": "io.ionic.tabla",
+  "appName": "appTabla",
+  "bundledWebRuntime": false,
+  "linuxAndroidStudioPath": "/snap/bin/android-studio",
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1,
+      "launchAutoHide": true,
+      "backgroundColor": "#ffffffff"
+    }
+  }
+}

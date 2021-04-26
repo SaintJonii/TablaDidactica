@@ -15,19 +15,33 @@
         <ion-card-subtitle>Tabla Didáctica</ion-card-subtitle>
         <ion-card-title>Ingrese sus datos</ion-card-title>
       </ion-card-header>
-    
+
       <ion-card-content>
-        <ion-item>
-          <ion-label position="floating">Usuario </ion-label>
-          <ion-input type="text" [(ngModel)]="user"></ion-input>
-        </ion-item><br>
-        <ion-item>
-          <ion-label position="floating">Contraseña </ion-label>
-          <ion-input type="password" [(ngModel)]="pass"></ion-input>
-        </ion-item><br>
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="submit()">
+          <ion-item>
+            <ion-label position="floating">Usuario </ion-label>
+            <ion-input formControlName="correo" name="correo" type="text" [(ngModel)]="user"></ion-input>
+          </ion-item>
+          <div *ngFor= "let error of errorMessages.correo">
+            <ng-container *ngIf= "correo.hasError(error.type) && (correo.dirty || correo.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div><br>
+          <ion-item>
+            <ion-label position="floating">Contraseña </ion-label>
+            <ion-input formControlName="clave" name="clave" type="password" [(ngModel)]="pass"></ion-input>
+          </ion-item>
+          <div *ngFor= "let error of errorMessages.clave">
+            <ng-container *ngIf= "clave.hasError(error.type) && (clave.dirty || clave.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div><br>
+        </form>
       </ion-card-content>
-      <ion-button shape="round" (click)="login()" expand="block" color="success">
-      <ion-icon name="enter-outline" slot="end"></ion-icon>Ingresar</ion-button>
+
+      <ion-button [disabled]="!loginForm.valid" shape="round" (click)="login()" expand="block" color="success">
+        <ion-icon name="enter-outline" slot="end"></ion-icon>Ingresar
+      </ion-button>
     </ion-card>
 
   </div>

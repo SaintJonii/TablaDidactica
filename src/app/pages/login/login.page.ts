@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { FormBuilder, Validators, FormControl, FormGroup  } from '@angular/forms'
+import { FormBuilder, Validators, FormControl, FormGroup  } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -45,14 +46,30 @@ export class LoginPage implements OnInit {
      { type: 'minlength', message: 'La clave no puede tener menos de seis caracteres' } ],
  }
 
-  constructor(private auth: AuthService, public formBuider: FormBuilder) { }
+  constructor(private auth: AuthService, private formBuider: FormBuilder, private alertController: AlertController) { }
 
   ngOnInit() {
   }
 
-  login() {
-    this.auth.loginUser(this.user, this.pass);
+  async login() {
+    let validation:any = await this.auth.loginUser(this.user, this.pass);
+    if(validation == 1){
+      this.noValidado();
+    }
   }
 
+  async noValidado() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      subHeader: 'Credenciales incorrectas',
+      message: 'Ingrese usuario y contraseña nuevamente',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
 
 }

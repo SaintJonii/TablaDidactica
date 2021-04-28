@@ -8,6 +8,8 @@ import { LoginPageRoutingModule } from './login-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { LoginPage } from './login.page';
+import { SelectComponent } from './../../components/select/select.component';
+
 
 @NgModule({
   imports: [
@@ -17,6 +19,6 @@ import { LoginPage } from './login.page';
     LoginPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage, SelectComponent]
 })
 export class LoginPageModule {}

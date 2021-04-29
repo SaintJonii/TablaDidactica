@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons  slot="start">
+      <ion-back-button style="font-family: Arial, Helvetica, sans-serif;"
+        defaultHref="/"
+        text="Regresar"
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="tituloHeader">
+      Lista 
+       <ion-icon class="ionIcon" src="./assets/sign-out-alt-solid.svg" (click)="salir()"></ion-icon>
+     </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- <ion-content style="background-color: #78b43c;">
+  <ion-list style="background-color: #78b43c;">
+    <ion-item *ngFor="let item of lista">
+      <ion-icon src={{item.caminoImagen}} slot="start" (click)="reaccion(item)"></ion-icon>
+      {{item.titulo}}
+     ¿<div class="item-note" slot="end">
+        {{item.titulo}}
+      </div> -->
+    <!-- </ion-item> -->
+  <!-- </ion-list> -->
+
+<!-- </ion-content> --> 
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success">
+      <ion-icon src="../../assets/ninos.svg"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-item *ngFor="let item of lista">
+     <ion-fab-botton><ion-icon src={{item.caminoImagen}} slot="start" (click)="reaccion(item)"></ion-icon></ion-fab-botton>     
+      </ion-item>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

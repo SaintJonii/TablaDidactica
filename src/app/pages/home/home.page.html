@@ -1,9 +1,85 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Home Tabla Didáctica</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<div class="home">
 
-</ion-content>
+  <ion-content class="content">
+  
+      <div *ngIf='categoria == 0'>
+  
+        <button class="btn1" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[0].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[0].nombreBoton)"></button>
+        <button class="btn2" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[1].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[1].nombreBoton)"></button>
+        <button class="btn3" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[2].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[2].nombreBoton)"></button>
+        <button class="btn4" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[3].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[3].nombreBoton)"></button>
+        <button class="btn5"[ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[4].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[4].nombreBoton)"></button>     
+  
+      </div>
+  
+      <div *ngIf='categoria == 1'>
+  
+        <button class="btnRotacion1" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[0].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[0].nombreBoton)"></button>
+        <button class="btnRotacion2" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[1].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[1].nombreBoton)"></button>
+        <button class="btnRotacion3" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[2].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[2].nombreBoton)"></button>
+        <button class="btnRotacion4" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[3].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[3].nombreBoton)"></button>
+        <button class="btnRotacion5"[ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[4].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[4].nombreBoton)"></button>     
+  
+      </div>
+  
+      <div *ngIf='categoria == 2'>
+  
+        <button class="btnRotacionAnimales1" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[0].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[0].nombreBoton)"></button>
+        <button class="btnRotacionAnimales2" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[1].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[1].nombreBoton)"></button>
+        <button class="btnRotacionAnimales3" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[2].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[2].nombreBoton)"></button>
+        <button class="btnRotacionAnimales4" [ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[3].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[3].nombreBoton)"></button>
+        <button class="btnRotacionAnimales5"[ngStyle]="{ 'background-image': 'url(' + diccionarioPrincipal[4].caminoImagen + ')'}"
+        (click)="Accion(diccionarioPrincipal[4].nombreBoton)"></button>     
+  
+      </div>
+  
+  
+  
+  
+      <ion-fab style="font-size: 50px;" vertical="top" horizontal="start" slot="fixed">
+        <ion-fab-button color="success">
+          <ion-icon src={{objetoIdioma.caminoImagen}}></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="end">
+          <ion-item  *ngFor="let item of listaIdiomas">
+         <ion-fab-botton><ion-icon src={{item.caminoImagen}}  slot="start" (click)="reaccionIdioma(item)"></ion-icon></ion-fab-botton>     
+          </ion-item>
+        </ion-fab-list>
+      </ion-fab>
+   
+  </ion-content>
+  
+  
+  
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="success">
+        <ion-icon src="../../assets/ninos.svg"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-item  *ngFor="let item of lista">
+       <ion-fab-botton><ion-icon src={{item.caminoImagen}} slot="start" (click)="reaccionObjeto(item)"></ion-icon></ion-fab-botton>     
+        </ion-item>
+      </ion-fab-list>
+    </ion-fab> 
+  
+  </div>
+  
+   
+  
+  
+  

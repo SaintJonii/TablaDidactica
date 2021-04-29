@@ -1,0 +1,200 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  
+  button{
+    position:fixed;
+    display:block;
+    background:red;  
+    background-size:cover;
+    background-position:center;
+    // background-image:url(https://images.unsplash.com/photo-1459682687441-7761439a709d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+  }
+  
+  .btn1, .btn2, .btn5, .btn4{
+    width:45%;
+    height: 30%;
+  }
+  
+  .btn1{
+    top: 5%;
+    left:2.5%;
+  }
+  
+  .btn2{
+    top:5%;
+    right:2.5%;
+  }
+  
+  .btn3{  
+    width: 95%;
+    left: 2.5%;
+    height: 30%;
+    top: 38%;
+  }
+  
+  .btn4{
+      top: 70%;
+      left:2.5%;
+  }
+  
+  .btn5{top: 70%;right:2.5%;}
+  
+  
+  
+  .btnRotacion1, .btnRotacion2, .btnRotacion5, .btnRotacion4{
+    width:45%;
+    height: 30%;
+  }
+  
+  .btnRotacion1{
+    top: 5%;
+    left:2.5%;
+  }
+  
+  .btnRotacion2{
+    top:5%;
+    right:2.5%;
+  }
+  
+  .btnRotacion3{  
+    width: 95%;
+    left: 2.5%;
+    height: 30%;
+    top: 36%;
+  }
+  
+  .btnRotacion4{
+      top: 70%;
+      left:2.5%;
+  }
+  
+  .btnRotacion5{top: 70%;right:2.5%;}
+  
+  .btnRotacionAnimales1, .btnRotacionAnimales2, .btnRotacionAnimales5, .btnRotacionAnimales4{
+    width:45%;
+    height: 30%;
+  }
+  
+  .btnRotacionAnimales1{
+    top: 5%;
+    left:2.5%;
+  }
+  
+  .btnRotacionAnimales2{
+    top:5%;
+    right:2.5%;
+  }
+  
+  .btnRotacionAnimales3{  
+    width: 95%;
+    left: 2.5%;
+    height: 30%;
+    top: 38%;
+  }
+  
+  .btnRotacionAnimales4{
+      top: 70%;
+      left:2.5%;
+  }
+  
+  .btnRotacionAnimales5{top: 70%;right:2.5%;}
+  
+  
+  @media (orientation:landscape){
+  
+  
+  
+    .btnRotacion1 {
+      top:10;
+      background:url('../../../assets/fondoBotones/fondoUnoHorizontal.png') no-repeat center / cover !important;
+  
+    }
+    
+     .btnRotacion2 {
+      top:10;
+      background:url('../../../assets/fondoBotones/fondoDosHorizontal.png') no-repeat center / cover !important;
+  
+    }
+    
+    .btnRotacion3 {
+      top:25;
+      background:url('../../../assets/fondoBotones/fondoTresHorizontal.png') no-repeat center / cover !important;
+    }
+  
+   .btnRotacion4 {
+    top:68%;
+    background:url('../../../assets/fondoBotones/fondoCuatroHorizontal.png') no-repeat center / cover !important;
+   }
+  
+    .btnRotacion5 {
+       top:68%;
+       background:url('../../../assets/fondoBotones/fondoCincoHorizontal.png') no-repeat center / cover !important;
+    }
+  }
+  
+  @media (orientation:landscape){
+  
+  
+    .btnRotacionAnimales1 {
+      top:10;
+      background:url('../../../assets/fondoBotones/fondoLeon.jpg') no-repeat center / cover !important;
+  
+    }
+    
+     .btnRotacionAnimales2 {
+      top:10;
+      background:url('../../../assets/fondoBotones/fondoCaimanHorizontal.png') no-repeat center / cover !important;
+  
+    }
+    
+    .btnRotacionAnimales3 {
+      top:25;
+      background:url('../../../assets/fondoBotones/fondoElefanteHorizontal.png') no-repeat center / cover !important;
+    }
+  
+   .btnRotacionAnimales4 {
+    top:68%;
+    background:url('../../../assets/fondoBotones/fondoJirafaHorizontal.png') no-repeat center / cover !important;
+   }
+  
+    .btnRotacionAnimales5 {
+       top:68%;
+       background:url('../../../assets/fondoBotones/fondoCebraHorizontal.png') no-repeat center / cover !important;
+    }
+  }
+  
+  
+  
+  .fab-vertical-top .hydrated {
+    font-size: 70px;
+  }
+  
+  .ion-focusable .hydrated {
+    font-size: 40px;
+  }

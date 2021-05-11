@@ -101,10 +101,10 @@ export class MissionService {
 
     if(carpetaOpcion == "animales")
     {
-      this.uno.src = this.caminoAudios + carpetaIdioma + '/' + carpetaOpcion + '/' + opcion + '.ogg';
+      this.uno.src = this.caminoAudios + carpetaIdioma + '/' + carpetaOpcion + '/' + opcion + '.mp3';
     }
     else{
-      this.uno.src = this.caminoAudios + carpetaIdioma + '/' + carpetaOpcion + '/' + opcion + '.ogg';  
+      this.uno.src = this.caminoAudios + carpetaIdioma + '/' + carpetaOpcion + '/' + opcion + '.mp3';  
     }
         
     this.uno.load();

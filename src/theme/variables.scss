@@ -1,5 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
 /** Ionic CSS Variables **/
 :root {
@@ -179,15 +180,12 @@
     --ion-color-step-900: #e6e6e6;
     --ion-color-step-950: #f2f2f2;
 
-    --ion-item-background: #000000;
+    --ion-toolbar-background: #0d0d0d;
 
-    --ion-card-background: #1c1c1d;
-  }
+    --ion-item-background: #6eb130;
 
-  .ios ion-modal {
-    --ion-background-color: var(--ion-color-step-100);
-    --ion-toolbar-background: var(--ion-color-step-150);
-    --ion-toolbar-border-color: var(--ion-color-step-250);
+    --ion-card-background: url('../assets/fondo_card.jpg');
+
   }
 
 
@@ -231,6 +229,485 @@
 
     --ion-tab-bar-background: #1f1f1f;
 
-    --ion-card-background: #1e1e1e;
+    --ion-card-background: url('../assets/fondo_card.jpg');
+  }
+}
+
+ion-toolbar{
+  --background:none;
+  text-align: center;
+  background-color: #000000;
+  color:#d1cfcf;
+}
+
+.ionIcon{
+  margin: 2% 0% 0% 20%;
+}
+
+.ionIconMenu{
+  margin: 2% 0% 0% 20%;
+}
+
+.ionIconIzquierda{
+  margin: 2% 30% 0% 0%;
+}
+
+.ios {
+  --ion-font-family: 'Gloria Hallelujah'; /* It's also good to add a fallback font here */
+}
+
+.list-md {
+  background: url('../assets/fondo_card.jpg') !important;
+} 
+
+
+.btnPrincipal{
+  
+  height: 15%;
+  width: 90%;
+  margin: 5% 5% 0% 5%;
+ // box-shadow: 0 15px rgb(60, 47, 126);
+  border-radius: 10px;
+  border: 2px solid;
+  font-size: 150%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+ 
+}
+
+.registro {
+  color: black;
+  font-family: cursive;
+  font-size: x-large;
+  margin-left: 160px;
+}
+
+.cargaUsuarios {
+  color: black;
+  font-family: cursive;
+  font-size: x-large;
+
+}
+
+.btnMenu{
+
+  height: 40%;
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+ // box-shadow: 0 15px rgb(60, 47, 126);
+  border-radius: 5px;
+  border: 2.5px solid;
+  font-size: 150%;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+  position: relative;
+ 
+}
+
+.ion-router-link {
+  color: red;
+  font-weight: bold;
+}
+
+.cabeceraMensaje{
+  font-size: 80%;
+  pad: 0%;
+  color: #D2D1D7;
+}
+
+
+
+.btnIngreso{
+
+  height: 10%;
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+ // box-shadow: 0 15px rgb(60, 47, 126);
+  border-radius: 5px;
+  border: 2.5px solid;
+  font-size: 150%;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+  position: relative;
+ 
+}
+
+
+.colorAdmin{
+  background: red;
+  color: #ffffff;
+  border-color: #D2D1D7;
+ }
+
+ .colorInvitado{
+  background: seagreen;
+  color: #ffffff;
+  border-color: #D2D1D7;
+ }
+
+ .colorUsuario{
+  background: steelblue;
+  color: #ffffff;
+  border-color: #D2D1D7;
+ }
+
+ .colorAnonimo{
+  background: black;
+  color: #ffffff;
+  border-color: #D2D1D7;
+ }
+
+ .colorTester{
+  background: #c4c4c4;
+  color: #ffffff;
+  border-color: #D2D1D7;
+ }
+
+.colorSecundario{
+ background:#002540;
+ color: #ffffff;
+ border-color: #D2D1D7;
+}
+
+.colorTerciario{
+ background: #0070f7;  
+ color: #000000;
+ border-color:#D2D1D7; 
+}
+
+// propios a la derecha
+.mensaje{
+  font-size: 120%;
+  color: #ffffff;   
+}
+
+.mensajePropio{
+  background:#02406d;  
+  margin: 2% 2% 2% 10%;
+ }
+
+.mensajeGrupo{
+  background:#002540;  
+  margin: 2% 10% 2% 2%;
+ }
+ 
+ .enviarTexto{
+  color:white;
+}
+
+.unSpinner{
+  width: 100%;
+  height: 100%;
+  color:  #F60100; 
+  // stroke: #444;
+  // fill: #222;
+  // background-color: rgba(131, 130, 133,.3) 
+}
+
+.divInputError{
+  font-size: 1.0em !important;
+  font-family: 'Bangers', cursive;
+  color:red;
+}
+
+
+
+
+
+.tituloHeader{
+  margin: 0% 0% 0% 0%;
+}
+
+.ionIcon{
+  margin: 2% 0% 0% 30%;
+}
+
+.headerLargo{
+  margin: 0% 0% 0% 5%;
+}
+
+.iconHeaderLargo{
+  margin: 2% 0% 0% 10%;
+  
+  // padding: 25% 0% 0% 0%;
+}
+
+
+@media (orientation:landscape){
+
+  .btnIngreso{
+
+    height: 12%; 
+    margin: 1% 5% 1% 5%;
+    font-size: 110%;
+  }
+
+  .btnPrincipal{
+  
+    height: 13%;
+    width: 90%;
+    margin: 1% 5% 0% 5%;   
+    font-size: 110%;   
+   
+  }
+
+  .btnMenu{
+    height: 30%;
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+   
+  }
+
+
+  // ion-content {
+  //   // --background:#373538;
+  //  // --background:#ffffff;
+  //  --background: '../assets/fondoBauhaus.png';
+  //   background-size: cover;
+  //   background-position: center center;
+  //   font-family: 'Fredoka One', cursive;
+  // }
+  
+  ion-title{
+    font-size: 27px;
+    text-align: center;
+    color:black;    
+    font-family: 'Fredoka One', cursive;
+  }
+  
+  .IconTestDerecha{
+    margin: 0% 5% 0% 10%;
+  }
+  
+  .headerTest{
+    margin: 0% 0% 0% 10%;
+  }
+  
+  .headerRegistro{
+    margin: 0% 0% 0% 25%;
+  }
+  
+  
+  .ionIcon{
+    margin: 2% 0% 0% 70%;
+  }
+  
+  .ionIconIzquierda{
+    margin: 2% 35% 0% 0%;
+  }
+  
+  .divIngreso{
+    height: 19%;
+    font-size: 27px;
+    padding: 6% 0% 0% 0%;
+  }
+  
+  .btnSecundario{
+    background: #000000;
+  }
+  
+  .btnTercero{
+    background:#FAB301;
+  }
+  
+  .btnBauhaus{
+    border: 10px solid black;
+    font-size: 180%;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    position: relative;   
+    margin: 5% 5% 0% 5%; 
+  }
+  
+  .btnNormal{
+    border: 2px solid black;
+    max-height: 20%;
+    max-width: 100%; 
+    // margin: 1% 1% 1% 1%;
+  }
+  
+  // .divChico{
+  //   max-height: 35%;
+  //   max-width: 100%; 
+  //   background-color: grey;  
+  // }
+  
+  
+  // .divGrande{
+  //   max-height: 34%;
+  //   max-width: 100%; 
+  //   background-color: #000000;
+  //   color:white;
+  // }
+  
+  // .divGrande .btnGrande img{
+  //   object-fit: cover;
+  //   width: 100%;
+  //   height: 100%;
+    
+  // }
+  
+  .btnBauhausChico{  
+    height: 100%;
+    width: 50%;  
+  }
+  
+  .btnBauhausGrande{  
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  
+  .btnChico{
+    height: 100%;
+    width: 50%;
+    max-height: 100%;
+    max-width: 50%; 
+    border: 2px solid black;
+    margin: 0px;
+    padding: 0px;
+    
+    // background-color: red;  
+  }
+  
+  .btnGrande{
+    background-size: auto 100%;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    border: 2px solid black;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .divChico{
+    height: 35%;
+    max-height: 35%;
+    max-width: 100%; 
+    background-color: grey;  
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .divGrande{
+    height: 34%;
+    width: 100%;
+    max-height: 34%;
+    max-width: 100%; 
+    background-color: #000000;
+    color:white;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  
+  .bauhausAzul{
+    background: rgb(0,0,255);
+    //background: url('../assets/fondoBotones/sofiaTeQuiero.png')
+  }
+  
+  .bauhausRojo{
+    background: rgb(255,0,0);
+  }
+  
+  .bauhausAmarillo{
+    background: rgb(255, 251, 1);
+  }
+  
+  .bauhausVerde{
+    background: #10e409;
+  }
+  
+  .bauhausNaranja{
+    background: #f77903;;
+  }
+  
+  .bauhausVioleta{
+    background: #660099;
+  }
+  
+  
+  // BAUHAUS --Ingreso
+  
+  .btnBauhausRojo{  
+    height: 25%;
+    width: 60%;
+    background: rgb(255,0,0);
+    border: 10px solid black;
+    font-size: 180%;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    position: relative;  
+    margin: 5% 35% 5% 5%;
+  }
+  
+  .btnBauhausAzul{  
+    height: 20%;
+    width: 100%;
+    background: rgb(0,0,255);
+    border: 10px solid black;
+    font-size: 180%;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    position: relative;  
+    // margin: 5% 0% 5% 0%;
+  }
+  
+  .btnBauhausAmarillo{  
+    height: 20%;
+    width: 70%;
+    background: rgb(255,242,0);
+    border: 10px solid black;
+    font-size: 180%;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    position: relative;
+    margin: 5% 20% 0% 20%;  
+  }
+  
+  //input 
+  .divInput{
+    font-size: 1.5em !important;
+    font-family: 'Fredoka One', cursive;
+  }
+  
+  
+  .divInputError{
+    font-size: 1.0em !important;
+    font-family: 'Fredoka One', cursive;
+    color:red;
+  }
+  
+  @media (orientation:landscape){
+      
+  
+    .btnBauhausRojo{  
+      height: 18%;
+      width: 60%;    
+      font-size: 150%;        
+      margin: 0% 35% 1% 1%;
+    }
+    
+    .btnBauhausAzul{  
+      height: 18%;
+      width: 100%;
+      font-size: 150%;    
+      letter-spacing: 2px;
+      position: relative;  
+      // margin: 5% 0% 5% 0%;
+    }
+    
+    .btnBauhausAmarillo{  
+      height: 18%;
+      width: 70%;
+      font-size: 150%;
+      margin: 1% 20% 0% 20%;  
+    }
   }
 }

@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { FormBuilder, Validators, FormControl, FormGroup  } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -56,6 +57,27 @@ export class LoginPage implements OnInit {
     if(validation == 1){
       this.noValidado();
     }
+  }
+
+  LoginAdmin(){
+    this.user="admin@admin.com";
+    this.pass="111111";
+  }
+  LoginInvitado(){
+    this.user="invitado@invitado.com";
+    this.pass="222222";
+  }
+  LoginUsuario(){
+    this.user="usuario@usuario.com";
+    this.pass="333333";
+  }
+  LoginAnonimo(){
+    this.user="anonimo@anonimo.com";
+    this.pass="444444";
+  }
+  LoginTester(){
+    this.user="tester@tester.com";
+    this.pass="555555";
   }
 
   accesoRapido() {

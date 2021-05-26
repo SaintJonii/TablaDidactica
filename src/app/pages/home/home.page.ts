@@ -97,4 +97,8 @@ this.missionService.Reproducir(indice);
   {
     this.router.navigate(['/login']);
   }
+
+  logout(){
+    this.router.navigateByUrl('login');
+  }
 }

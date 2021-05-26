@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { FormBuilder, Validators, FormControl, FormGroup  } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -46,10 +47,12 @@ export class LoginPage implements OnInit {
      { type: 'maxlength', message: 'La clave no puede tener mas de 20 caracteres' },
      { type: 'minlength', message: 'La clave no puede tener menos de cuatro caracteres' } ],
  }
-  constructor(private auth: AuthService, private formBuider: FormBuilder, private alertController: AlertController) { }
+  constructor(private auth: AuthService, private formBuider: FormBuilder, private alertController: AlertController,
+              private router: Router) { }
 
   ngOnInit() {
     this.botonAcceso = true;
+    this.limpiarInputs();
   }
 
   async login() {

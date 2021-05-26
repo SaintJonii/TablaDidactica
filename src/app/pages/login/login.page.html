@@ -15,10 +15,11 @@
 
   <div style="height: 25%; display: flex; align-items: center; justify-content: center;">
 
-    <form id="form" [formGroup]="loginForm" (ngSubmit)="submit()">
+    <form id="form" [formGroup]="loginForm">
   
       <ion-item class="ion-margin-bottom">
         <ion-input formControlName="correo" placeholder="Correo electrónico" [(ngModel)]="user"></ion-input>
+        <ion-icon name="at-sharp" slot="start"></ion-icon>
       </ion-item>
       <div *ngFor="let error of errorMessages.correo">
         <ng-container *ngIf="correo.hasError(error.type) && (correo.dirty || correo.touched)">
@@ -27,6 +28,7 @@
       </div><br>
       <ion-item class="ion-margin-bottom">
         <ion-input formControlName="clave" type="password" placeholder="Contraseña" [(ngModel)]="pass"></ion-input>
+        <ion-icon name="key-sharp" slot="start"></ion-icon>
       </ion-item>
       <div *ngFor="let error of errorMessages.clave">
         <ng-container *ngIf="clave.hasError(error.type) && (clave.dirty || clave.touched)">
@@ -34,7 +36,8 @@
         </ng-container>
       </div><br>
   
-      <ion-button expand="block" type="submit"  (click)="login()" color="success" shape="round">Iniciar sesión</ion-button>
+      <ion-button expand="block" type="submit"  (click)="login()" color="success" shape="round">
+        <ion-icon name="chevron-forward-sharp" slot="end"></ion-icon>Iniciar sesión</ion-button>
     </form>
 
   </div>

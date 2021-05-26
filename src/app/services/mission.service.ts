@@ -40,7 +40,7 @@ export class MissionService {
 
   botonUno = new ImagenBoton("uno", './assets/fondoBotones/fondoUno.png');
   botonDos = new ImagenBoton("dos", './assets/fondoBotones/fondoDos.png');
-  botonTres = new ImagenBoton("tres", './assets/fondoBotones/fondoTresCuatro.png');
+  botonTres = new ImagenBoton("tres", './assets/fondoBotones/fondoTres.png');
   botonCuatro = new ImagenBoton("cuatro", './assets/fondoBotones/fondoCuatro.png');
   botonCinco = new ImagenBoton("cinco", './assets/fondoBotones/fondoCinco.png');
 
